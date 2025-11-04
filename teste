@@ -1,0 +1,124 @@
+def checar_semaforo(cor):
+    if cor == "verde":
+        return "siga!"
+    elif cor == "amarelo":
+        return "atenção!"
+    elif cor == "vermelho":
+        return "pare!"
+    else:
+        return "Cor invalida."
+print(checar_semaforo("verde"))
+print(checar_semaforo("amarelo"))
+print(checar_semaforo("vermelho"))
+print(checar_semaforo("azul"))
+
+questao 2 
+
+def classificar_imc(imc):
+    if imc < 18.5:
+        return "abaixo do peso"
+    elif imc >= 18.5 and imc < 24.9:
+        return "peso normal"
+    elif imc >= 25.0 and imc < 29.9:
+        return "sobrepeso"
+    else:
+        return "obesidade"
+
+
+print(classificar_imc(17.8)) 
+print(classificar_imc(22.3))  
+print(classificar_imc(27.5)) 
+print(classificar_imc(31.0))
+
+
+questao 3 
+
+
+def checar_elegibilidade(renda, score):
+    if renda >= 5000 and score >= 700:
+        return "cartao Premium elegivel"
+    elif renda >= 2000 and score >= 600:
+        return "cartao standard elegivel"
+    else:
+        return "nao elegivel no momento"
+
+
+renda = float(input("Digite sua renda: "))
+score = float(input("Digite seu score: "))
+
+resultado = checar_elegibilidade(renda, score)
+print(resultado)
+
+questao 4 
+
+def sugerir_roupa(temp):
+    if temp > 30:
+        return "muito calor, use roupas leves."
+    elif temp >= 18 and temp <= 30:
+        return "clima agradavel, uma camiseta e calça são ideais."
+    else:
+        return "Está frio. Vista um casaco! "
+temperatura = float(input("Digite a temperatura atual: "))
+print(sugerir_roupa(temperatura))
+
+questao 5
+def verificar_vencedor(placar_time_a, placar_time_b):
+    if placar_time_a > placar_time_b:
+        return "time A venceu!"
+    elif placar_time_b > placar_time_a:
+        return "time B venceu!"
+    else:
+        return "empate!"
+
+a = int(input("digite o placar do time A: "))
+b = int(input("digite o placar do time B: "))
+print(verificar_vencedor(a, b))
+
+questao 6
+def tipo_de_dia(dia_da_semana):
+    dia = dia_da_semana.lower()
+    if dia == "sábado" or dia == "domingo":
+        return "fim de semana!"
+    else:
+        return "dia Útil."
+dia = input("digite o dia da semana: ")
+print(tipo_de_dia(dia))
+
+questao 7
+def calcular_frete(valor_pedido):
+    if valor_pedido >= 80:
+        return valor_pedido
+    else:
+        return valor_pedido + 10
+valor = float(input("digite o valor do pedido: "))
+print("valor total com frete:", calcular_frete(valor))
+
+questao 8
+def classificar_avaliacao(estrelas):
+    if estrelas == 5:
+        return "excelente!"
+    elif estrelas == 4:
+        return "muito bom."
+    elif estrelas == 3:
+        return "satisfatório."
+    elif estrelas == 2 or estrelas == 1:
+        return "insatisfatório."
+    else:
+        return "avaliação inválida."
+avaliacao = int(input("Digite o número de estrelas (1 a 5): "))
+print(classificar_avaliacao(avaliacao))
+
+questao 9
+
+def identificar_veiculo(placa):
+    primeira_letra = placa[0].upper() # professor esse .upper() vai deixar todas as letras maiusculas para nao dar problema na hora da exercução.
+    if primeira_letra in ['A', 'B', 'C']:
+        return "carro de passeio"
+    elif primeira_letra in ['M', 'N', 'O']:
+        return "motocicleta"
+    else:
+        return "outro tipo de veiculo"
+placa = input("Digite a placa do veículo (ex: ABC-1234): ")
+print(identificar_veiculo(placa))
+
+
